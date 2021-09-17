@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@800&display=swap');
+
+@keyframes fadeIn {
+  0%{ opacity: 0; display: none;}
+  1%{ display: block; opacity: 0; }
+  100%{ display: block; opacity: 1;; }
+}
+body {
+  background-color: gray;
+  font-family: sans-serif;
+}
+.container {
+  width: 400px;
+  height: 550px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px 20px 30px 20px;
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.377);
+  transition: 1s;
+}
+.container-calculadora-peso, .container-calculadora-altura {
+  margin-bottom: 16px;
+  width: 100%;
+}
+input[type="button"] { 
+  transition: 2s;
+  width: 100%;
+  height: 50px;
+  background-color: #1b2845;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  letter-spacing: 2px;
+  font: bold 1.5em sans-serif;
+  border-radius: 25px;
+}
+.slider-peso, .slider-altura {
+  margin: 10px auto;
+  width: 300px;
+  outline: none;
+  height: 10px;
+  background-color: green;
+  cursor: pointer;
+  appearance: none;
+  display: block;
+  background-color: #E3E3E3;
+  border-radius: 2px;
+  border: 1px solid #d4d4d4;
+}
+.slider-peso::-webkit-slider-thumb, .slider-altura::-webkit-slider-thumb {
+  appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #1b2845;
+  border-radius: 2px;
+}
+.slider-peso::-moz-range-thumb, .slider-altura::-moz-range-thumb {
+  appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #1b2845;
+  border-radius: 2px;
+}
+.input-number {
+  width: 100px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  background-color: #E3E3E3;
+  text-align: center;
+  border: 1px solid #d4d4d4;
+}
+.peso-input-number, .altura-input-number {
+  margin: 10px;
+}
+input[type="button"]:active {
+  width: 98%;
+  margin-left: 5px;
+}
+input[type="button"]:hover {
+  transition: 0.2s;
+  background-color: #3D5B9C;
+}
+.resultado {
+  font: bold 1.5em sans-serif;
+  width: 250px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 25px auto;
+  background-color: #E3E3E3;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #1b2845;
+  font-family: 'Prompt', sans-serif;
+  font-size: 2.5em;
+}
+form label {
+  font-weight: 600;
+}
+.altura-input-number, .peso-input-number {
+  width: 200px;
+  margin: 25px auto 25px;
+}
+.erro {
+  opacity: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+  color: red;
+}
+.opcao-tabela {
+  text-align: right;
+  width: 15px;
+  height: 25px;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  background-color: #1b2845;
+  position: absolute;
+  top: 510px;
+  left: 390px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+  border-radius: 3px;
+}
+.opcao-tabela > span {
+  opacity: 0;
+  transition: 0.2s;
+}
+.opcao-tabela:hover {
+  width: 150px;
+  transition: 0.5s;
+}
+.opcao-tabela:hover span {
+  opacity: 1;
+  transition: 2.3s;
+}
+.container-tabela {
+  width: 750px;
+  height: 400px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #1b2845;
+  border-radius: 5px;
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.411);
+  z-index: -100;
+  opacity: 0;
+}
+table {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+}
+.container-tabela th {
+  width: 300px;
+  background-color: #1b2845;
+  color: white;
+  font: bold 1.5em sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.container-tabela tr {
+  height: 50px;
+}
+.container-tabela td {
+  padding: 10px;
+  font-size: 1.2em;
+}
+.cor {
+  background-color: #e6e6e6;
+}
+.cor .class {
+  border-left: 2px solid white;
+} 
+.class {
+  text-align: center;
+}
+.border {
+  border-left: 2px solid white;
+}
+tr:hover {
+  background-color: #d4d4d4;
+}
+.opcao-calculadora {
+  text-align: right;
+  width: 15px;
+  height: 25px;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  background-color: #1b2845;
+  position: absolute;
+  top: 360px;
+  left: 745px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+  border-radius: 3px;
+}
+.opcao-calculadora > span {
+  opacity: 0;
+  transition: 0.2s;
+}
+.opcao-calculadora:hover {
+  width: 150px;
+  transition: 0.5s;
+}
+.opcao-calculadora:hover span {
+  opacity: 1;
+  transition: 2.3s;
+}
